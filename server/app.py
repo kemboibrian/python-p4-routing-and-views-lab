@@ -17,7 +17,7 @@ def print_string(param):
 @app.route('/count/<int:param>')
 def count(param):
     numbers = '\n'.join(str(i) for i in range(param))
-    return numbers + '\n'  # Ensure there's a newline character at the end
+    return numbers + '\n'  
 
 # Math route
 @app.route('/math/<int:num1>/<operation>/<int:num2>')
