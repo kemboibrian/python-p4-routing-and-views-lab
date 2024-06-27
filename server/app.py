@@ -16,10 +16,8 @@ def print_string(param):
 # Count route
 @app.route('/count/<int:param>')
 def count(param):
-    output = '<h1>Count Numbers:</h1><p>'
-    for i in range(param):
-        output += str(i) + '\n'
-    return output.strip()
+    numbers = '\n'.join(str(i) for i in range(param))
+    return numbers + '\n'  # Ensure there's a newline character at the end
 
 # Math route
 @app.route('/math/<int:num1>/<operation>/<int:num2>')
